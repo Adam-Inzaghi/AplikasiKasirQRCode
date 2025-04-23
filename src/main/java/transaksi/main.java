@@ -40,13 +40,14 @@ public class main {
     }
     
     static void tambahTransaksi(){
-        System.out.print("Nama Toko:");
+        System.out.print("Nama Toko: ");
         String toko = input.nextLine();
-        System.out.print("Nama pembeli:");
+        System.out.print("Nama pembeli: ");
         String pembeli = input.nextLine();
-        System.out.print("Total Belanja:");
+        System.out.print("Total Belanja: ");
         double total = input.nextDouble(); input.nextLine();
-        System.out.print("Mode Pembayaran:");
+        System.out.print("Metode Pembayaran: ");
+        String metode = input.nextLine();
 
 //        transaksi = new Transaksi(toko,pembeli,total,metode);
         System.out.println("Tranasaksi berhasil ditambahkan.\n");
