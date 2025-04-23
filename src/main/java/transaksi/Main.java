@@ -2,9 +2,9 @@ package transaksi;
 
 import java.util.Scanner;
 
-public class main {
+public class Main {
     static Scanner input = new Scanner (System.in);
-//    static Transaksi transaksi = null;
+    static Transaksi transaksi = null;
     
     public static void main (String[]args){
         while(true){
@@ -49,7 +49,7 @@ public class main {
         System.out.print("Metode Pembayaran: ");
         String metode = input.nextLine();
 
-//        transaksi = new Transaksi(toko,pembeli,total,metode);
+        transaksi = new Transaksi(toko,pembeli,total,metode);
         System.out.println("Tranasaksi berhasil ditambahkan.\n");
     }
 
@@ -60,8 +60,8 @@ public class main {
 //            return;
 //        }
 //        try{
-//            QRCodeGeneraton.generateQRCode(transaksi.toStaring(),"transaksi.png");
-//            System.out.println("QR Codeberasil dibuat: transaksi.png\n");
+//            QRCodeGeneraton.generateQRCode(transaksi.toString(),"transaksi.png");
+//            System.out.println("QR Code berhasil dibuat: transaksi.png\n");
 //        }catch(Exception e){
 //            System.out.println("Gagal generate QR:"+ e.getMessage());
 //        }
