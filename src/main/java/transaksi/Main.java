@@ -54,26 +54,26 @@ public class Main {
     }
 
     static void generateQR(){
-        System.out.println("Anda telah masuk ke menu Generate QR Code");
-//        if(transaksi == null){
-//            System.out.println("Data transaksi belum ada!\n");
-//            return;
-//        }
-//        try{
-//            QRCodeGeneraton.generateQRCode(transaksi.toString(),"transaksi.png");
-//            System.out.println("QR Code berhasil dibuat: transaksi.png\n");
-//        }catch(Exception e){
-//            System.out.println("Gagal generate QR:"+ e.getMessage());
-//        }
+//        System.out.println("Anda telah masuk ke menu Generate QR Code");
+        if(transaksi == null){
+            System.out.println("Data transaksi belum ada!\n");
+            return;
+        }
+        try{
+            QRCodeGenerator.generateQRCode(transaksi.toString(),"transaksi.png");
+            System.out.println("QR Code berhasil dibuat: transaksi.png\n");
+        }catch(Exception e){
+            System.out.println("Gagal generate QR:"+ e.getMessage());
+        }
     }
     
     static void scanQR(){
-        System.out.println("Anda telah masuk ke menu Scan QR Code");
-//        try{
-//            String hasil = QRCodeScanner.scanerQRCode("transaksi.png");
-//            System.out.println("Isi QR Code:\n" + hasil + "\n");
-//        } catch(Exception e) {
-//            System.out.println("Gagal scan QR:"+ e.getMessage());
-//        }
+//        System.out.println("Anda telah masuk ke menu Scan QR Code");
+        try{
+            String hasil = QRCodeScanner.scanQRCode("transaksi.png");
+            System.out.println("Isi QR Code:\n" + hasil + "\n");
+        } catch(Exception e) {
+            System.out.println("Gagal scan QR:"+ e.getMessage());
+        }
     }
 }
